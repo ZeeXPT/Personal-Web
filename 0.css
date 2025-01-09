@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #000000;
+    background: linear-gradient(gray, black,blue);
+    color: white;
+    padding-top: 60px; /* Menghindari overlap dengan header */
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: blue;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 4px solid blue;
+        border-bottom: 4px solid blue;
+        border-bottom-left-radius: 2rem;
+        background-color: black;
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a:active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid blue;
+    }
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Menjadikan kontainer berpusat secara vertikal */
+}
+
+h1 {
+    font-size: 4em; /* Perbesar ukuran teks */
+    margin-bottom: 50px;
+}
+
+.character {
+    width: 300px; /* Perbesar ukuran gambar */
+    margin-top: -50px; /* Atur jarak vertikal */
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px; /* Perbesar ukuran tombol */
+    font-size: 1.5em; /* Perbesar ukuran font */
+    color: purple;
+    background: white;
+    border: 2px solid purple;
+    border-radius: 10px; /* Membuat sudut lebih melengkung */
+    text-decoration: none;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.2); /* Efek zoom lebih besar saat hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #000000, blue, black);
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+  

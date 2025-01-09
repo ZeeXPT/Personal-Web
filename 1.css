@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(gray, black, blue);
+    color: white;
+}
+
+/* Header */
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: blue;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+/* Responsive Navigation */
+@media (max-width: 995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        background-color: black;
+        border-left: 4px solid blue;
+        border-bottom: 4px solid blue;
+        border-bottom-left-radius: 2rem;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.certificate-container {
+    position: relative;
+    width: 80%;
+    max-width: 550px;
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+.certificates {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.certificate {
+    min-width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.certificate img {
+    max-width: 100%;
+    height: auto;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.highlight {
+    color: #ffbf00;
+}
+
+
+#cert1:checked ~ .certificates {
+    transform: translateX(0);
+}
+
+#cert2:checked ~ .certificates {
+    transform: translateX(-100%);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #000000, blue, black);
+    color: white;
+    font-size: 1.4rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
